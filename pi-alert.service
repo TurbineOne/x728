@@ -1,0 +1,13 @@
+[Unit]
+Description=Alert administrators when RasPi disconnected from power. 
+After=network-online.target
+
+[Service]
+User=turbineone
+Type=simple
+ExecStart=/usr/bin/python3 /path/to/your/script.py
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
